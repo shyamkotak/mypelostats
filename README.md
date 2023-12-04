@@ -1,4 +1,4 @@
-# MyPelotStats — Typescript
+# MyPeloStats
 
 Simple website to show 2023 Peloton stats
 
