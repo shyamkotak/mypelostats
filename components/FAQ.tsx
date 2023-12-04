@@ -16,7 +16,7 @@ const faqList: FAQItemProps[] = [
     question: "What happens when I upload data?",
     answer: (
       <p>
-        We'll give you some fun stats on your Peloton workouts in 2023
+        We&apos;ll give you some fun stats on your Peloton workouts in 2023
       </p>
     )
   },

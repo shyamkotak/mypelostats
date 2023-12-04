@@ -17,7 +17,7 @@ function getDistancePerMonth(workouts: WorkoutData[]): {month: string, distance:
         const monthIndex = date.getMonth(); // getMonth() returns a zero-based index of the month
 
         // Initialize the sum for the month if not already done
-        if (!distanceFrequency.hasOwnProperty(monthIndex)) {
+        if (!Object.prototype.hasOwnProperty.call(distanceFrequency, monthIndex)) {
             distanceFrequency[monthIndex] = 0;
         }
 
@@ -27,7 +27,7 @@ function getDistancePerMonth(workouts: WorkoutData[]): {month: string, distance:
     
     console.log(distanceFrequency)
 
-    // Convert the frequency map to an array, sort it, and slice the top 5
+    // Convert the frequency map to an array
     return Object.entries(distanceFrequency)
         .map(([month, distance]) => ({ month, distance }))
 }

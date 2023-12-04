@@ -19,7 +19,7 @@ const WorkoutMinutesChart = (workoutData: WorkoutMinutesChartProps) => {
         const monthIndex = date.getMonth(); // getMonth() returns a zero-based index of the month
 
         // Initialize the sum for the month if not already done
-        if (!monthlySums.hasOwnProperty(monthIndex)) {
+        if (!Object.prototype.hasOwnProperty.call(monthlySums, monthIndex)) {
             monthlySums[monthIndex] = 0;
         }
 

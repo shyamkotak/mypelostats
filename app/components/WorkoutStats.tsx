@@ -16,7 +16,7 @@ const WorkoutStats = () => {
     const [uploadedData, setUploadedData] = useState<WorkoutData[]>([]);
     const [isFileUploaded, setIsFileUploaded] = useState(false);
 
-    const handleFileUpload = event => {
+    const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files[0];
         if (file && file.type === "text/csv") {
             Papa.parse(file, {
@@ -57,12 +57,12 @@ const WorkoutStats = () => {
                         <div className="flex flex-col text-left basis-1/2">
                             <h2 className="text-4xl font-bold text-primary mb-4">Get Started</h2>
                             <p className="text-3xl font-semibold text-base-content mb-2">
-                                Upload your workout stats
+                                See your 2023 Peloton Year-In-Review
                             </p>
                             <ul className="list-disc list-inside sm:text-lg text-base text-base-content">
                                 <li>Go to members.onepeloton.com</li>
-                                <li>Go to Profile -> Workouts</li>
-                                <li>Click on "Download Your Workouts"</li>
+                                <li>Go to Profile -{'>'} Workouts</li>
+                                <li>Click on &quot;Download Your Workouts&quot;</li>
                                 <li>Upload and enjoy!</li>
                             </ul>
                         </div>
@@ -106,7 +106,7 @@ const WorkoutStats = () => {
                     <div className="py-24 px-8 max-w-7xl mx-auto flex justify-center items-center">
                         <div className="text-center">
                             <p className="text-4xl font-extrabold text-white">
-                                You crushed 2023! Can't wait to see what you accomplish in 2024 💪
+                                You crushed 2023! Can&apos;t wait to see what you accomplish in 2024 💪
                             </p>
                         </div>
                     </div>

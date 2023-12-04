@@ -51,7 +51,7 @@ const Footer = () => {
                     className="link link-hover"
                     aria-label="Contact Support"
                   >
-                    Have ideas? Questions? Email for Support
+                    Have ideas? Questions? Send us an email!
                   </a>
                 )}
                 {/* <Link href="/#pricing" className="link link-hover">
