@@ -60,7 +60,7 @@ const WorkoutStats = () => {
                                 See your 2023 Peloton Year-In-Review
                             </p>
                             <ul className="list-disc list-inside sm:text-lg text-base text-base-content">
-                                <li>Go to members.onepeloton.com</li>
+                                <li>Go to <a href="https://members.onepeloton.com" target="_blank">members.onepeloton.com</a></li>
                                 <li>Go to Profile -{'>'} Workouts</li>
                                 <li>Click on &quot;Download Your Workouts&quot;</li>
                                 <li>Upload and enjoy!</li>
