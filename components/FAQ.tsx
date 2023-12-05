@@ -24,7 +24,7 @@ const faqList: FAQItemProps[] = [
     question: "Is this safe?",
     answer: (
       <p>
-        Yes! We do not store any of your workout data - this is just for fun!
+        Yes! We do not store any of your workout data
       </p>
     ),
   },
