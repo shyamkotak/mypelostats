@@ -106,7 +106,7 @@ const WorkoutStats = () => {
                     <div className="py-24 px-8 max-w-7xl mx-auto flex justify-center items-center">
                         <div className="text-center">
                             <p className="text-4xl font-extrabold text-white">
-                                You crushed 2023! Can&apos;t wait to see what you accomplish in 2024 💪
+                                <br></br>You crushed 2023!<br></br><br></br>Can&apos;t wait to see what you accomplish in 2024 💪
                             </p>
                         </div>
                     </div>

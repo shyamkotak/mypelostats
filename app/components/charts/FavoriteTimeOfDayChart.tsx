@@ -1,6 +1,7 @@
 import { Bar } from 'react-chartjs-2';
 
 import WorkoutData from "../../interfaces/WorkoutData";
+import { shuffle } from '@/libs/shuffle';
 
 
 type FavoriteTimeOfDayChartProps = {
@@ -60,32 +61,27 @@ function getTopTimesOfDay(workouts: WorkoutData[]): {time: string, count: number
 
 const FavoriteTimeOfDayChart = (workoutData: FavoriteTimeOfDayChartProps) => {
     const favoriteTimes = getTopTimesOfDay(workoutData.data)
+    const favoriteTime = favoriteTimes[0].time
 
     const labels = favoriteTimes.map(item => item.time);
     const data = favoriteTimes.map(item => item.count);
+
+    const colorList = [
+        'rgba(255, 99, 132, 0.6)', // Red
+        'rgba(54, 162, 235, 0.6)', // Blue
+        'rgba(75, 192, 192, 0.6)', // Green
+        'rgba(255, 206, 86, 0.6)', // Yellow
+        'rgba(255, 159, 64, 0.6)', // Orange
+        'rgba(255, 105, 180, 0.6)', // Pink
+    ]
+    const shuffledColors = shuffle(colorList)
 
     const chartData = {
         labels: labels,
         datasets: [{
             data: data,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.6)', // Red
-                'rgba(54, 162, 235, 0.6)', // Blue
-                'rgba(75, 192, 192, 0.6)', // Green
-                'rgba(255, 206, 86, 0.6)', // Yellow
-                'rgba(255, 159, 64, 0.6)', // Orange
-                'rgba(255, 105, 180, 0.6)', // Pink
-                // ... add more colors for remaining months ...
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)', // Red
-                'rgba(54, 162, 235, 1)', // Blue
-                'rgba(75, 192, 192, 1)', // Green
-                'rgba(255, 206, 86, 1)', // Yellow
-                'rgba(255, 159, 64, 1)', // Orange
-                'rgba(255, 105, 180, 1)', // Pink
-                // ... add more colors for remaining months ...
-            ],
+            backgroundColor: shuffledColors,
+            borderColor: shuffledColors,
             borderWidth: 2,
             hoverBorderColor: 'rgba(0, 0, 0, 1)',
             hoverBackgroundColor: 'rgba(255, 255, 255, 0.8)',
@@ -139,7 +135,7 @@ const FavoriteTimeOfDayChart = (workoutData: FavoriteTimeOfDayChartProps) => {
             <div className="flex flex-col text-left basis-1/2">
                     <p className="inline-block font-semibold text-red-500 mb-4">Favorite Time To Workout</p>
                     <p className="sm:text-4xl text-3xl font-extrabold text-white">
-                        And you loved working out throughout the day
+                        And you loved working out at <span className="text-yellow-300">{favoriteTime}</span>
                     </p>
                 </div>
                 <div className="flex-1">
