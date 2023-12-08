@@ -39,13 +39,13 @@ const WorkoutMinutesChart = (workoutData: WorkoutMinutesChartProps) => {
     }
 
     const colorList = [
-        'rgba(255, 99, 132, 0.6)', // Red
-        'rgba(54, 162, 235, 0.6)', // Blue
-        'rgba(75, 192, 192, 0.6)', // Green
-        'rgba(255, 206, 86, 0.6)', // Yellow
-        'rgba(255, 159, 64, 0.6)', // Orange
-        'rgba(255, 105, 180, 0.6)', // Pink
-    ]
+        'rgba(255, 0, 102, 0.7)',
+        'rgba(0, 191, 255, 0.7)',
+        'rgba(0, 255, 127, 0.7)',
+        'rgba(255, 255, 0, 0.7)',
+        'rgba(255, 165, 0, 0.7)',
+        'rgba(255, 20, 147, 0.7)',
+    ];
     const shuffledColors = shuffle(colorList)
 
     const labels = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
