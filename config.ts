@@ -98,4 +98,5 @@ const config = {
   },
 } as ConfigProps;
 
+
 export default config;
